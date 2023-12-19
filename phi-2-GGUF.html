@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="absolute inset-x-0 top-0 z-30 mb-10 lg:mb-0"><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><a href="/" class="-m-1.5 p-1.5 flex items-center justify-center space-x-2"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Phi.svg" alt="" class="w-14 h-14"><p class="font-bold md:text-xl lg:text-xl text-black flex items-center">Phi-2</p></a></div><div class="flex lg:hidden"><button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"><span class="sr-only">Open main menu</span><svg xmlns="https://upload.wikimedia.org/wikipedia/commons/2/28/Phi.svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg></button></div><div class="hidden lg:flex lg:gap-x-12 z-index"><a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a><a href="/Phi-1" class="text-sm font-semibold leading-6 text-gray-900">Phi-2</a><a href="/Phi-1-1.5" class="text-sm font-semibold leading-6 text-gray-900">Phi-1-1.5</a><a href="/blogs" class="text-sm font-semibold leading-6 text-gray-900">Blogs</a></div><div class="hidden lg:flex lg:flex-1 lg:justify-end"><button class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</button></div></nav><div style="position:fixed;top:1px;left:1px;width:1px;height:0;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none"></div></header>
+<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><a href="/" class="-m-1.5 p-1.5 flex items-center justify-center space-x-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Phi.svg/135px-Phi.svg.png?20060813031530" alt="Phi-2  Logo" class="w-14 h-14"><p class="font-bold md:text-xl lg:text-xl text-black flex items-center">Phi-2</p></a></div><div class="flex lg:hidden"><button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"><span class="sr-only">Open main menu</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg></button></div><div class="hidden lg:flex lg:gap-x-12 z-index"><a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a><a href="/Phi-2" class="text-sm font-semibold leading-6 text-gray-900">Phi-2</a><a href="/Phi-1-1.5" class="text-sm font-semibold leading-6 text-gray-900">Phi-1-1.5</a><a href="/blogs" class="text-sm font-semibold leading-6 text-gray-900">Blogs</a></div><div class="hidden lg:flex lg:flex-1 lg:justify-end"><button class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</button></div></nav>
+<section>
+  <div class="prose px-6 -mx-6 lg:-mr-20 lg:pr-20 xl:-mr-24 xl:pr-24 2xl:-mr-36 2xl:pr-36 hf-sanitized hf-sanitized-hrRYDQ52oGbIvDUzGtrrt">
+    <!-- HTML_TAG_START --><div style="width: auto; margin-left: auto; margin-right: auto">
+  <img style="width: 100%; min-width: 400px; display: block; margin: auto;" alt="TheBlokeAI" src="https://i.imgur.com/EBdldam.jpg">
+  </div>
+  <div style="display: flex; justify-content: space-between; width: 100%;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
+          <p style="margin-top: 0.5em; margin-bottom: 0em;"><a rel="noopener nofollow" href="https://discord.gg/theblokeai">Chat &amp; support: TheBloke's Discord server</a></p>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end;">
+          <p style="margin-top: 0.5em; margin-bottom: 0em;"><a rel="noopener nofollow" href="https://www.patreon.com/TheBlokeAI">Want to contribute? TheBloke's Patreon page</a></p>
+      </div>
+  </div>
+  <div style="text-align:center; margin-top: 0em; margin-bottom: 0em"><p style="margin-top: 0.25em; margin-bottom: 0em;">TheBloke's LLM work is generously supported by a grant from <a rel="noopener nofollow" href="https://a16z.com">andreessen horowitz (a16z)</a></p></div>
+  <hr style="margin-top: 1.0em; margin-bottom: 1.0em;">
+  
+  
+  <h1 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#phi-2---gguf" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="phi-2---gguf">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Phi 2 - GGUF
+    </span>
+  </h1>
+  <ul>
+  <li>Model creator: <a rel="noopener nofollow" href="https://huggingface.co/microsoft">Microsoft</a></li>
+  <li>Original model: <a rel="noopener nofollow" href="https://huggingface.co/microsoft/phi-2">Phi 2</a></li>
+  </ul>
+  
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#description" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="description">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Description
+    </span>
+  </h2>
+  <p>This repo contains GGUF format model files for <a rel="noopener nofollow" href="https://huggingface.co/microsoft/phi-2">Microsoft's Phi 2</a>.</p>
+  
+  
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#about-gguf" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="about-gguf">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      About GGUF
+    </span>
+  </h3>
+  <p>GGUF is a new format introduced by the llama.cpp team on August 21st 2023. It is a replacement for GGML, which is no longer supported by llama.cpp.</p>
+  <p>Here is an incomplete list of clients and libraries that are known to support GGUF:</p>
+  <ul>
+  <li><a rel="noopener nofollow" href="https://github.com/ggerganov/llama.cpp">llama.cpp</a>. The source project for GGUF. Offers a CLI and a server option.</li>
+  <li><a rel="noopener nofollow" href="https://github.com/oobabooga/text-generation-webui">text-generation-webui</a>, the most widely used web UI, with many features and powerful extensions. Supports GPU acceleration.</li>
+  <li><a rel="noopener nofollow" href="https://github.com/LostRuins/koboldcpp">KoboldCpp</a>, a fully featured web UI, with GPU accel across all platforms and GPU architectures. Especially good for story telling.</li>
+  <li><a rel="noopener nofollow" href="https://gpt4all.io/index.html">GPT4All</a>, a free and open source local running GUI, supporting Windows, Linux and macOS with full GPU accel.</li>
+  <li><a rel="noopener nofollow" href="https://lmstudio.ai/">LM Studio</a>, an easy-to-use and powerful local GUI for Windows and macOS (Silicon), with GPU acceleration. Linux available, in beta as of 27/11/2023.</li>
+  <li><a rel="noopener nofollow" href="https://github.com/ParisNeo/lollms-webui">LoLLMS Web UI</a>, a great web UI with many interesting and unique features, including a full model library for easy model selection.</li>
+  <li><a rel="noopener nofollow" href="https://faraday.dev/">Faraday.dev</a>, an attractive and easy to use character-based chat GUI for Windows and macOS (both Silicon and Intel), with GPU acceleration.</li>
+  <li><a rel="noopener nofollow" href="https://github.com/abetlen/llama-cpp-python">llama-cpp-python</a>, a Python library with GPU accel, LangChain support, and OpenAI-compatible API server.</li>
+  <li><a rel="noopener nofollow" href="https://github.com/huggingface/candle">candle</a>, a Rust ML framework with a focus on performance, including GPU support, and ease of use.</li>
+  <li><a rel="noopener nofollow" href="https://github.com/marella/ctransformers">ctransformers</a>, a Python library with GPU accel, LangChain support, and OpenAI-compatible AI server. Note, as of time of writing (November 27th 2023), ctransformers has not been updated in a long time and does not support many recent models.</li>
+  </ul>
+  
+  
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#repositories-available" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="repositories-available">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Repositories available
+    </span>
+  </h2>
+  <ul>
+  <li><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GPTQ">GPTQ models for GPU inference, with multiple quantisation parameter options.</a></li>
+  <li><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF">2, 3, 4, 5, 6 and 8-bit GGUF models for CPU+GPU inference</a></li>
+  <li><a rel="noopener nofollow" href="https://huggingface.co/microsoft/phi-2">Microsoft's original unquantised fp16 model in pytorch format, for GPU inference and for further conversions</a></li>
+  </ul>
+  
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#prompt-template-phi" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="prompt-template-phi">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Prompt template: Phi
+    </span>
+  </h2>
+  <div class="relative group repo-copy-code"><pre><code>Instruct: {prompt}
+  Output:
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  
+  
+  
+  
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#compatibility" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="compatibility">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Compatibility
+    </span>
+  </h2>
+  <p>These quantised GGUFv2 files are compatible with llama.cpp from August 27th onwards, as of commit <a rel="noopener nofollow" href="https://github.com/ggerganov/llama.cpp/commit/d0cee0d36d5be95a0d9088b674dbb27354107221">d0cee0d</a></p>
+  <p>They are also compatible with many third party UIs and libraries - please see the list at the top of this README.</p>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#explanation-of-quantisation-methods" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="explanation-of-quantisation-methods">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Explanation of quantisation methods
+    </span>
+  </h2>
+  <details>
+    <summary>Click to see details</summary>
+  
+  <p>The new methods available are:</p>
+  <ul>
+  <li>GGML_TYPE_Q2_K - "type-1" 2-bit quantization in super-blocks containing 16 blocks, each block having 16 weight. Block scales and mins are quantized with 4 bits. This ends up effectively using 2.5625 bits per weight (bpw)</li>
+  <li>GGML_TYPE_Q3_K - "type-0" 3-bit quantization in super-blocks containing 16 blocks, each block having 16 weights. Scales are quantized with 6 bits. This end up using 3.4375 bpw.</li>
+  <li>GGML_TYPE_Q4_K - "type-1" 4-bit quantization in super-blocks containing 8 blocks, each block having 32 weights. Scales and mins are quantized with 6 bits. This ends up using 4.5 bpw.</li>
+  <li>GGML_TYPE_Q5_K - "type-1" 5-bit quantization. Same super-block structure as GGML_TYPE_Q4_K resulting in 5.5 bpw</li>
+  <li>GGML_TYPE_Q6_K - "type-0" 6-bit quantization. Super-blocks with 16 blocks, each block having 16 weights. Scales are quantized with 8 bits. This ends up using 6.5625 bpw</li>
+  </ul>
+  <p>Refer to the Provided Files table below to see what files use which methods, and how.</p>
+  </details>
+  
+  
+  
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#provided-files" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="provided-files">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Provided files
+    </span>
+  </h2>
+  <div class="max-w-full overflow-auto">
+    <table>
+      <thead><tr>
+  <th>Name</th>
+  <th>Quant method</th>
+  <th>Bits</th>
+  <th>Size</th>
+  <th>Max RAM required</th>
+  <th>Use case</th>
+  </tr>
+  
+      </thead><tbody><tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q2_K.gguf">phi-2.Q2_K.gguf</a></td>
+  <td>Q2_K</td>
+  <td>2</td>
+  <td>1.17 GB</td>
+  <td>3.67 GB</td>
+  <td>smallest, significant quality loss - not recommended for most purposes</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q3_K_S.gguf">phi-2.Q3_K_S.gguf</a></td>
+  <td>Q3_K_S</td>
+  <td>3</td>
+  <td>1.25 GB</td>
+  <td>3.75 GB</td>
+  <td>very small, high quality loss</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q3_K_M.gguf">phi-2.Q3_K_M.gguf</a></td>
+  <td>Q3_K_M</td>
+  <td>3</td>
+  <td>1.48 GB</td>
+  <td>3.98 GB</td>
+  <td>very small, high quality loss</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q4_0.gguf">phi-2.Q4_0.gguf</a></td>
+  <td>Q4_0</td>
+  <td>4</td>
+  <td>1.60 GB</td>
+  <td>4.10 GB</td>
+  <td>legacy; small, very high quality loss - prefer using Q3_K_M</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q3_K_L.gguf">phi-2.Q3_K_L.gguf</a></td>
+  <td>Q3_K_L</td>
+  <td>3</td>
+  <td>1.60 GB</td>
+  <td>4.10 GB</td>
+  <td>small, substantial quality loss</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q4_K_S.gguf">phi-2.Q4_K_S.gguf</a></td>
+  <td>Q4_K_S</td>
+  <td>4</td>
+  <td>1.62 GB</td>
+  <td>4.12 GB</td>
+  <td>small, greater quality loss</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q4_K_M.gguf">phi-2.Q4_K_M.gguf</a></td>
+  <td>Q4_K_M</td>
+  <td>4</td>
+  <td>1.79 GB</td>
+  <td>4.29 GB</td>
+  <td>medium, balanced quality - recommended</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q5_0.gguf">phi-2.Q5_0.gguf</a></td>
+  <td>Q5_0</td>
+  <td>5</td>
+  <td>1.93 GB</td>
+  <td>4.43 GB</td>
+  <td>legacy; medium, balanced quality - prefer using Q4_K_M</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q5_K_S.gguf">phi-2.Q5_K_S.gguf</a></td>
+  <td>Q5_K_S</td>
+  <td>5</td>
+  <td>1.93 GB</td>
+  <td>4.43 GB</td>
+  <td>large, low quality loss - recommended</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q5_K_M.gguf">phi-2.Q5_K_M.gguf</a></td>
+  <td>Q5_K_M</td>
+  <td>5</td>
+  <td>2.07 GB</td>
+  <td>4.57 GB</td>
+  <td>large, very low quality loss - recommended</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q6_K.gguf">phi-2.Q6_K.gguf</a></td>
+  <td>Q6_K</td>
+  <td>6</td>
+  <td>2.29 GB</td>
+  <td>4.79 GB</td>
+  <td>very large, extremely low quality loss</td>
+  </tr>
+  <tr>
+  <td><a rel="noopener nofollow" href="https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q8_0.gguf">phi-2.Q8_0.gguf</a></td>
+  <td>Q8_0</td>
+  <td>8</td>
+  <td>2.96 GB</td>
+  <td>5.46 GB</td>
+  <td>very large, extremely low quality loss - not recommended</td>
+  </tr>
+  </tbody>
+    </table>
+  </div>
+  <p><strong>Note</strong>: the above RAM figures assume no GPU offloading. If layers are offloaded to the GPU, this will reduce RAM usage and use VRAM instead.</p>
+  
+  
+  
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#how-to-download-gguf-files" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="how-to-download-gguf-files">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      How to download GGUF files
+    </span>
+  </h2>
+  <p><strong>Note for manual downloaders:</strong> You almost never want to clone the entire repo! Multiple different quantisation formats are provided, and most users only want to pick and download a single file.</p>
+  <p>The following clients/libraries will automatically download models for you, providing a list of available models to choose from:</p>
+  <ul>
+  <li>LM Studio</li>
+  <li>LoLLMS Web UI</li>
+  <li>Faraday.dev</li>
+  </ul>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#in-text-generation-webui" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="in-text-generation-webui">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      In <code>text-generation-webui</code>
+    </span>
+  </h3>
+  <p>Under Download Model, you can enter the model repo: TheBloke/phi-2-GGUF and below it, a specific filename to download, such as: phi-2.Q4_K_M.gguf.</p>
+  <p>Then click Download.</p>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#on-the-command-line-including-multiple-files-at-once" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="on-the-command-line-including-multiple-files-at-once">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      On the command line, including multiple files at once
+    </span>
+  </h3>
+  <p>I recommend using the <code>huggingface-hub</code> Python library:</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-shell">pip3 install huggingface-hub
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>Then you can download any individual model file to the current directory, at high speed, with a command like this:</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-shell">huggingface-cli download TheBloke/phi-2-GGUF phi-2.Q4_K_M.gguf --local-dir . --local-dir-use-symlinks False
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <details>
+    <summary>More advanced huggingface-cli download usage (click to read)</summary>
+  
+  <p>You can also download multiple files at once with a pattern:</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-shell">huggingface-cli download TheBloke/phi-2-GGUF --local-dir . --local-dir-use-symlinks False --include='*Q4_K*gguf'
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>For more documentation on downloading with <code>huggingface-cli</code>, please see: <a rel="noopener nofollow" href="https://huggingface.co/docs/huggingface_hub/guides/download#download-from-the-cli">HF -&gt; Hub Python Library -&gt; Download files -&gt; Download from the CLI</a>.</p>
+  <p>To accelerate downloads on fast connections (1Gbit/s or higher), install <code>hf_transfer</code>:</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-shell">pip3 install hf_transfer
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>And set environment variable <code>HF_HUB_ENABLE_HF_TRANSFER</code> to <code>1</code>:</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-shell">HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli download TheBloke/phi-2-GGUF phi-2.Q4_K_M.gguf --local-dir . --local-dir-use-symlinks False
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>Windows Command Line users: You can set the environment variable by running <code>set HF_HUB_ENABLE_HF_TRANSFER=1</code> before the download command.</p>
+  </details>
+  
+  
+  
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#example-llamacpp-command" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="example-llamacpp-command">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Example <code>llama.cpp</code> command
+    </span>
+  </h2>
+  <p>Make sure you are using <code>llama.cpp</code> from commit <a rel="noopener nofollow" href="https://github.com/ggerganov/llama.cpp/commit/d0cee0d36d5be95a0d9088b674dbb27354107221">d0cee0d</a> or later.</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-shell">./main -ngl 35 -m phi-2.Q4_K_M.gguf --color -c 2048 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "Instruct: {prompt}\nOutput:"
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>Change <code>-ngl 32</code> to the number of layers to offload to GPU. Remove it if you don't have GPU acceleration.</p>
+  <p>Change <code>-c 2048</code> to the desired sequence length. For extended sequence models - eg 8K, 16K, 32K - the necessary RoPE scaling parameters are read from the GGUF file and set by llama.cpp automatically. Note that longer sequence lengths require much more resources, so you may need to reduce this value.</p>
+  <p>If you want to have a chat-style conversation, replace the <code>-p &lt;PROMPT&gt;</code> argument with <code>-i -ins</code></p>
+  <p>For other parameters and how to use them, please refer to <a rel="noopener nofollow" href="https://github.com/ggerganov/llama.cpp/blob/master/examples/main/README.md">the llama.cpp documentation</a></p>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#how-to-run-in-text-generation-webui" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="how-to-run-in-text-generation-webui">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      How to run in <code>text-generation-webui</code>
+    </span>
+  </h2>
+  <p>Further instructions can be found in the text-generation-webui documentation, here: <a rel="noopener nofollow" href="https://github.com/oobabooga/text-generation-webui/blob/main/docs/04%20%E2%80%90%20Model%20Tab.md#llamacpp">text-generation-webui/docs/04 ‐ Model Tab.md</a>.</p>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#how-to-run-from-python-code" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="how-to-run-from-python-code">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      How to run from Python code
+    </span>
+  </h2>
+  <p>You can use GGUF models from Python using the <a rel="noopener nofollow" href="https://github.com/abetlen/llama-cpp-python">llama-cpp-python</a> or <a rel="noopener nofollow" href="https://github.com/marella/ctransformers">ctransformers</a> libraries. Note that at the time of writing (Nov 27th 2023), ctransformers has not been updated for some time and is not compatible with some recent models. Therefore I recommend you use llama-cpp-python.</p>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#how-to-load-this-model-in-python-code-using-llama-cpp-python" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="how-to-load-this-model-in-python-code-using-llama-cpp-python">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      How to load this model in Python code, using llama-cpp-python
+    </span>
+  </h3>
+  <p>For full documentation, please see: <a rel="noopener nofollow" href="https://abetlen.github.io/llama-cpp-python/">llama-cpp-python docs</a>.</p>
+  <h4 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#first-install-the-package" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="first-install-the-package">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      First install the package
+    </span>
+  </h4>
+  <p>Run one of the following commands, according to your system:</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">Base ctransformers with no GPU acceleration</span>
+  pip install llama-cpp-python
+  <span class="hljs-meta prompt_"># </span><span class="language-bash">With NVidia CUDA acceleration</span>
+  CMAKE_ARGS="-DLLAMA_CUBLAS=on" pip install llama-cpp-python
+  <span class="hljs-meta prompt_"># </span><span class="language-bash">Or with OpenBLAS acceleration</span>
+  CMAKE_ARGS="-DLLAMA_BLAS=ON -DLLAMA_BLAS_VENDOR=OpenBLAS" pip install llama-cpp-python
+  <span class="hljs-meta prompt_"># </span><span class="language-bash">Or with CLBLast acceleration</span>
+  CMAKE_ARGS="-DLLAMA_CLBLAST=on" pip install llama-cpp-python
+  <span class="hljs-meta prompt_"># </span><span class="language-bash">Or with AMD ROCm GPU acceleration (Linux only)</span>
+  CMAKE_ARGS="-DLLAMA_HIPBLAS=on" pip install llama-cpp-python
+  <span class="hljs-meta prompt_"># </span><span class="language-bash">Or with Metal GPU acceleration <span class="hljs-keyword">for</span> macOS systems only</span>
+  CMAKE_ARGS="-DLLAMA_METAL=on" pip install llama-cpp-python
+  <span class="hljs-meta prompt_"></span>
+  <span class="hljs-meta prompt_"># </span><span class="language-bash">In windows, to <span class="hljs-built_in">set</span> the variables CMAKE_ARGS <span class="hljs-keyword">in</span> PowerShell, follow this format; eg <span class="hljs-keyword">for</span> NVidia CUDA:</span>
+  <span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">env</span>:CMAKE_ARGS = <span class="hljs-string">"-DLLAMA_OPENBLAS=on"</span></span>
+  pip install llama-cpp-python
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <h4 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#simple-llama-cpp-python-example-code" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="simple-llama-cpp-python-example-code">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Simple llama-cpp-python example code
+    </span>
+  </h4>
+  <div class="relative group repo-copy-code"><pre><code class="language-python"><span class="hljs-keyword">from</span> llama_cpp <span class="hljs-keyword">import</span> Llama
+  
+  <span class="hljs-comment"># Set gpu_layers to the number of layers to offload to GPU. Set to 0 if no GPU acceleration is available on your system.</span>
+  llm = Llama(
+    model_path=<span class="hljs-string">"./phi-2.Q4_K_M.gguf"</span>,  <span class="hljs-comment"># Download the model file first</span>
+    n_ctx=<span class="hljs-number">2048</span>,  <span class="hljs-comment"># The max sequence length to use - note that longer sequence lengths require much more resources</span>
+    n_threads=<span class="hljs-number">8</span>,            <span class="hljs-comment"># The number of CPU threads to use, tailor to your system and the resulting performance</span>
+    n_gpu_layers=<span class="hljs-number">35</span>         <span class="hljs-comment"># The number of layers to offload to GPU, if you have GPU acceleration available</span>
+  )
+  
+  <span class="hljs-comment"># Simple inference example</span>
+  output = llm(
+    <span class="hljs-string">"Instruct: {prompt}\nOutput:"</span>, <span class="hljs-comment"># Prompt</span>
+    max_tokens=<span class="hljs-number">512</span>,  <span class="hljs-comment"># Generate up to 512 tokens</span>
+    stop=[<span class="hljs-string">"&lt;/s&gt;"</span>],   <span class="hljs-comment"># Example stop token - not necessarily correct for this specific model! Please check before using.</span>
+    echo=<span class="hljs-literal">True</span>        <span class="hljs-comment"># Whether to echo the prompt</span>
+  )
+  
+  <span class="hljs-comment"># Chat Completion API</span>
+  
+  llm = Llama(model_path=<span class="hljs-string">"./phi-2.Q4_K_M.gguf"</span>, chat_format=<span class="hljs-string">"llama-2"</span>)  <span class="hljs-comment"># Set chat_format according to the model you are using</span>
+  llm.create_chat_completion(
+      messages = [
+          {<span class="hljs-string">"role"</span>: <span class="hljs-string">"system"</span>, <span class="hljs-string">"content"</span>: <span class="hljs-string">"You are a story writing assistant."</span>},
+          {
+              <span class="hljs-string">"role"</span>: <span class="hljs-string">"user"</span>,
+              <span class="hljs-string">"content"</span>: <span class="hljs-string">"Write a story about llamas."</span>
+          }
+      ]
+  )
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#how-to-use-with-langchain" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="how-to-use-with-langchain">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      How to use with LangChain
+    </span>
+  </h2>
+  <p>Here are guides on using llama-cpp-python and ctransformers with LangChain:</p>
+  <ul>
+  <li><a rel="noopener nofollow" href="https://python.langchain.com/docs/integrations/llms/llamacpp">LangChain + llama-cpp-python</a></li>
+  <li><a rel="noopener nofollow" href="https://python.langchain.com/docs/integrations/providers/ctransformers">LangChain + ctransformers</a></li>
+  </ul>
+  
+  
+  
+  
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#discord" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="discord">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Discord
+    </span>
+  </h2>
+  <p>For further support, and discussions on these models and AI in general, join us at:</p>
+  <p><a rel="noopener nofollow" href="https://discord.gg/theblokeai">TheBloke AI's Discord server</a></p>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#thanks-and-how-to-contribute" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="thanks-and-how-to-contribute">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Thanks, and how to contribute
+    </span>
+  </h2>
+  <p>Thanks to the <a rel="noopener nofollow" href="https://chirper.ai">chirper.ai</a> team!</p>
+  <p>Thanks to Clay from <a rel="noopener nofollow" href="/TheBloke/phi-2-GGUF/blob/main/llm-utils">gpus.llm-utils.org</a>!</p>
+  <p>I've had a lot of people ask if they can contribute. I enjoy providing models and helping people, and would love to be able to spend even more time doing it, as well as expanding into new projects like fine tuning/training.</p>
+  <p>If you're able and willing to contribute it will be most gratefully received and will help me to keep providing more models, and to start work on new AI projects.</p>
+  <p>Donaters will get priority support on any and all AI/LLM/model questions and requests, access to a private Discord room, plus other benefits.</p>
+  <ul>
+  <li>Patreon: <a rel="noopener nofollow" href="https://patreon.com/TheBlokeAI">https://patreon.com/TheBlokeAI</a></li>
+  <li>Ko-Fi: <a rel="noopener nofollow" href="https://ko-fi.com/TheBlokeAI">https://ko-fi.com/TheBlokeAI</a></li>
+  </ul>
+  <p><strong>Special thanks to</strong>: Aemon Algiz.</p>
+  <p><strong>Patreon special mentions</strong>: Michael Levine, 阿明, Trailburnt, Nikolai Manek, John Detwiler, Randy H, Will Dee, Sebastain Graf, NimbleBox.ai, Eugene Pentland, Emad Mostaque, Ai Maven, Jim Angel, Jeff Scroggin, Michael Davis, Manuel Alberto Morcote, Stephen Murray, Robert, Justin Joy, Luke @flexchar, Brandon Frisco, Elijah Stavena, S_X, Dan Guido, Undi ., Komninos Chatzipapas, Shadi, theTransient, Lone Striker, Raven Klaugh, jjj, Cap'n Zoog, Michel-Marie MAUDET (LINAGORA), Matthew Berman, David, Fen Risland, Omer Bin Jawed, Luke Pendergrass, Kalila, OG, Erik Bjäreholt, Rooh Singh, Joseph William Delisle, Dan Lewis, TL, John Villwock, AzureBlack, Brad, Pedro Madruga, Caitlyn Gatomon, K, jinyuan sun, Mano Prime, Alex, Jeffrey Morgan, Alicia Loh, Illia Dulskyi, Chadd, transmissions 11, fincy, Rainer Wilmers, ReadyPlayerEmma, knownsqashed, Mandus, biorpg, Deo Leter, Brandon Phillips, SuperWojo, Sean Connelly, Iucharbius, Jack West, Harry Royden McLaughlin, Nicholas, terasurfer, Vitor Caleffi, Duane Dunston, Johann-Peter Hartmann, David Ziegler, Olakabola, Ken Nordquist, Trenton Dambrowitz, Tom X Nguyen, Vadim, Ajan Kanaga, Leonard Tan, Clay Pascal, Alexandros Triantafyllidis, JM33133, Xule, vamX, ya boyyy, subjectnull, Talal Aujan, Alps Aficionado, wassieverse, Ari Malik, James Bentley, Woland, Spencer Kim, Michael Dempsey, Fred von Graf, Elle, zynix, William Richards, Stanislav Ovsiannikov, Edmond Seymore, Jonathan Leane, Martin Kemka, usrbinkat, Enrico Ros</p>
+  <p>Thank you to all my generous patrons and donaters!</p>
+  <p>And thank you again to a16z for their generous grant.</p>
+  
+  
+  
+  <h1 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#original-model-card-microsofts-phi-2" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="original-model-card-microsofts-phi-2">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Original model card: Microsoft's Phi 2
+    </span>
+  </h1>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#model-summary" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="model-summary">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Model Summary
+    </span>
+  </h2>
+  <p>Phi-2 is a Transformer with <strong>2.7 billion</strong> parameters. It was trained using the same data sources as <a rel="noopener nofollow" href="https://huggingface.co/microsoft/phi-1.5">Phi-1.5</a>, augmented with a new data source that consists of various NLP synthetic texts and filtered websites (for safety and educational value). When assessed against benchmarks testing common sense, language understanding, and logical reasoning, Phi-2 showcased a nearly state-of-the-art performance among models with less than 13 billion parameters.</p>
+  <p>Our model hasn't been fine-tuned through reinforcement learning from human feedback. The intention behind crafting this open-source model is to provide the research community with a non-restricted small model to explore vital safety challenges, such as reducing toxicity, understanding societal biases, enhancing controllability, and more.</p>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#intended-uses" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="intended-uses">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Intended Uses
+    </span>
+  </h2>
+  <p>Phi-2 is intended for research purposes only. Given the nature of the training data, the Phi-2 model is best suited for prompts using the QA format, the chat format, and the code format.</p>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#qa-format" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="qa-format">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      QA Format:
+    </span>
+  </h3>
+  <p>You can provide the prompt as a standalone question as follows:</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-markdown">Write a detailed analogy between mathematics and a lighthouse.
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>where the model generates the text after "." .
+  To encourage the model to write more concise answers, you can also try the following QA format using "Instruct: &lt;prompt&gt;\nOutput:"</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-markdown">Instruct: Write a detailed analogy between mathematics and a lighthouse.
+  Output: Mathematics is like a lighthouse. Just as a lighthouse guides ships safely to shore, mathematics provides a guiding light in the world of numbers and logic. It helps us navigate through complex problems and find solutions. Just as a lighthouse emits a steady beam of light, mathematics provides a consistent framework for reasoning and problem-solving. It illuminates the path to understanding and helps us make sense of the world around us.
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>where the model generates the text after "Output:".</p>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#chat-format" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="chat-format">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Chat Format:
+    </span>
+  </h3>
+  <div class="relative group repo-copy-code"><pre><code class="language-markdown">Alice: I don't know why, I'm struggling to maintain focus while studying. Any suggestions?
+  Bob: Well, have you tried creating a study schedule and sticking to it?
+  Alice: Yes, I have, but it doesn't seem to help much.
+  Bob: Hmm, maybe you should try studying in a quiet environment, like the library.
+  Alice: ...
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>where the model generates the text after the first "Bob:".</p>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#code-format" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="code-format">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Code Format:
+    </span>
+  </h3>
+  <div class="relative group repo-copy-code"><pre><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">print_prime</span>(<span class="hljs-params">n</span>):
+     <span class="hljs-string">"""</span>
+  <span class="hljs-string">   Print all primes between 1 and n</span>
+  <span class="hljs-string">   """</span>
+     primes = []
+     <span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, n+<span class="hljs-number">1</span>):
+         is_prime = <span class="hljs-literal">True</span>
+         <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, <span class="hljs-built_in">int</span>(math.sqrt(num))+<span class="hljs-number">1</span>):
+             <span class="hljs-keyword">if</span> num % i == <span class="hljs-number">0</span>:
+                 is_prime = <span class="hljs-literal">False</span>
+                 <span class="hljs-keyword">break</span>
+         <span class="hljs-keyword">if</span> is_prime:
+             primes.append(num)
+     <span class="hljs-built_in">print</span>(primes)
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p>where the model generates the text after the comments.</p>
+  <p><strong>Notes:</strong></p>
+  <ul>
+  <li>Phi-2 is intended for research purposes. The model-generated text/code should be treated as a starting point rather than a definitive solution for potential use cases. Users should be cautious when employing these models in their applications.</li>
+  <li>Direct adoption for production tasks is out of the scope of this research project. As a result, the Phi-2 model has not been tested to ensure that it performs adequately for any production-level application. Please refer to the limitation sections of this document for more details.</li>
+  <li>If you are using <code>transformers&gt;=4.36.0</code>, always load the model with <code>trust_remote_code=True</code> to prevent side-effects.</li>
+  </ul>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#sample-code" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="sample-code">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Sample Code
+    </span>
+  </h2>
+  <p>There are four types of execution mode:</p>
+  <ol>
+  <li>FP16 / Flash-Attention / CUDA:<div class="relative group repo-copy-code"><pre><code class="language-python">model = AutoModelForCausalLM.from_pretrained(<span class="hljs-string">"microsoft/phi-2"</span>, torch_dtype=<span class="hljs-string">"auto"</span>, flash_attn=<span class="hljs-literal">True</span>, flash_rotary=<span class="hljs-literal">True</span>, fused_dense=<span class="hljs-literal">True</span>, device_map=<span class="hljs-string">"cuda"</span>, trust_remote_code=<span class="hljs-literal">True</span>)
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  </li>
+  <li>FP16 / CUDA:<div class="relative group repo-copy-code"><pre><code class="language-python">model = AutoModelForCausalLM.from_pretrained(<span class="hljs-string">"microsoft/phi-2"</span>, torch_dtype=<span class="hljs-string">"auto"</span>, device_map=<span class="hljs-string">"cuda"</span>, trust_remote_code=<span class="hljs-literal">True</span>)
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  </li>
+  <li>FP32 / CUDA:<div class="relative group repo-copy-code"><pre><code class="language-python">model = AutoModelForCausalLM.from_pretrained(<span class="hljs-string">"microsoft/phi-2"</span>, torch_dtype=torch.float32, device_map=<span class="hljs-string">"cuda"</span>, trust_remote_code=<span class="hljs-literal">True</span>)
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  </li>
+  <li>FP32 / CPU:<div class="relative group repo-copy-code"><pre><code class="language-python">model = AutoModelForCausalLM.from_pretrained(<span class="hljs-string">"microsoft/phi-2"</span>, torch_dtype=torch.float32, device_map=<span class="hljs-string">"cpu"</span>, trust_remote_code=<span class="hljs-literal">True</span>)
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  </li>
+  </ol>
+  <p>To ensure the maximum compatibility, we recommend using the second execution mode (FP16 / CUDA), as follows:</p>
+  <div class="relative group repo-copy-code"><pre><code class="language-python"><span class="hljs-keyword">import</span> torch
+  <span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoModelForCausalLM, AutoTokenizer
+  
+  torch.set_default_device(<span class="hljs-string">"cuda"</span>)
+  
+  model = AutoModelForCausalLM.from_pretrained(<span class="hljs-string">"microsoft/phi-2"</span>, torch_dtype=<span class="hljs-string">"auto"</span>, trust_remote_code=<span class="hljs-literal">True</span>)
+  tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">"microsoft/phi-2"</span>, trust_remote_code=<span class="hljs-literal">True</span>)
+  
+  inputs = tokenizer(<span class="hljs-string">'''def print_prime(n):</span>
+  <span class="hljs-string">   """</span>
+  <span class="hljs-string">   Print all primes between 1 and n</span>
+  <span class="hljs-string">   """'''</span>, return_tensors=<span class="hljs-string">"pt"</span>, return_attention_mask=<span class="hljs-literal">False</span>)
+  
+  outputs = model.generate(**inputs, max_length=<span class="hljs-number">200</span>)
+  text = tokenizer.batch_decode(outputs)[<span class="hljs-number">0</span>]
+  <span class="hljs-built_in">print</span>(text)
+  </code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+  <p><strong>Remark:</strong> In the generation function, our model currently does not support beam search (<code>num_beams &gt; 1</code>).
+  Furthermore, in the forward pass of the model, we currently do not support outputting hidden states or attention values, or using custom input embeddings.</p>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#limitations-of-phi-2" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="limitations-of-phi-2">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Limitations of Phi-2
+    </span>
+  </h2>
+  <ul>
+  <li><p>Generate Inaccurate Code and Facts: The model may produce incorrect code snippets and statements. Users should treat these outputs as suggestions or starting points, not as definitive or accurate solutions.</p>
+  </li>
+  <li><p>Limited Scope for code: Majority of Phi-2 training data is based in Python and use common packages such as "typing, math, random, collections, datetime, itertools". If the model generates Python scripts that utilize other packages or scripts in other languages, we strongly recommend users manually verify all API uses.</p>
+  </li>
+  <li><p>Unreliable Responses to Instruction: The model has not undergone instruction fine-tuning. As a result, it may struggle or fail to adhere to intricate or nuanced instructions provided by users.</p>
+  </li>
+  <li><p>Language Limitations: The model is primarily designed to understand standard English. Informal English, slang, or any other languages might pose challenges to its comprehension, leading to potential misinterpretations or errors in response.</p>
+  </li>
+  <li><p>Potential Societal Biases: Phi-2 is not entirely free from societal biases despite efforts in assuring trainig data safety. There's a possibility it may generate content that mirrors these societal biases, particularly if prompted or instructed to do so. We urge users to be aware of this and to exercise caution and critical thinking when interpreting model outputs.</p>
+  </li>
+  <li><p>Toxicity: Despite being trained with carefully selected data, the model can still produce harmful content if explicitly prompted or instructed to do so. We chose to release the model for research purposes only -- We hope to help the open-source community develop the most effective ways to reduce the toxicity of a model directly after pretraining.</p>
+  </li>
+  <li><p>Verbosity: Phi-2 being a base model often produces irrelevant or extra text and responses following its first answer to user prompts within a single turn. This is due to its training dataset being primarily textbooks, which results in textbook-like responses.</p>
+  </li>
+  </ul>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#training" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="training">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Training
+    </span>
+  </h2>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#model" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="model">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Model
+    </span>
+  </h3>
+  <ul>
+  <li><p>Architecture: a Transformer-based model with next-word prediction objective</p>
+  </li>
+  <li><p>Context length: 2048 tokens</p>
+  </li>
+  <li><p>Dataset size: 250B tokens, combination of NLP synthetic data created by AOAI GPT-3.5 and filtered web data from Falcon RefinedWeb and SlimPajama, which was assessed by AOAI GPT-4.</p>
+  </li>
+  <li><p>Training tokens: 1.4T tokens</p>
+  </li>
+  <li><p>GPUs: 96xA100-80G</p>
+  </li>
+  <li><p>Training time: 14 days</p>
+  </li>
+  </ul>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#software" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="software">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Software
+    </span>
+  </h3>
+  <ul>
+  <li><p><a rel="noopener nofollow" href="https://github.com/pytorch/pytorch">PyTorch</a></p>
+  </li>
+  <li><p><a rel="noopener nofollow" href="https://github.com/microsoft/DeepSpeed">DeepSpeed</a></p>
+  </li>
+  <li><p><a rel="noopener nofollow" href="https://github.com/HazyResearch/flash-attention">Flash-Attention</a></p>
+  </li>
+  </ul>
+  <h3 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#license" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="license">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      License
+    </span>
+  </h3>
+  <p>The model is licensed under the <a rel="noopener nofollow" href="https://huggingface.co/microsoft/phi-2/resolve/main/LICENSE">microsoft-research-license</a>.</p>
+  <h2 class="relative group flex items-center">
+    <a rel="noopener nofollow" href="#trademarks" class="block pr-1.5 text-lg md:absolute md:p-1.5 md:opacity-0 md:group-hover:opacity-100 md:right-full" id="trademarks">
+      <span class="header-link"><svg viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" role="img" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="text-gray-500 hover:text-black dark:hover:text-gray-200 w-4"><path fill="currentColor" d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z"></path></svg></span>
+    </a>
+    <span>
+      Trademarks
+    </span>
+  </h2>
+  <p>This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow <a rel="noopener nofollow" href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks">Microsoft’s Trademark &amp; Brand Guidelines</a>. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.</p>
+  
+  <!-- HTML_TAG_END --></div>
+</section>
+
+<section>
+  <!-- Container -->
+  <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+    <!-- Component -->
+    <div class="bg-[#f2f2f7] p-8 text-center sm:p-10 md:p-16">
+      <!-- Title -->
+      <h2 class="mb-4 text-3xl font-bold md:text-5xl">Join the Phi-2.Top Community</h2>
+      <p class="mx-auto mb-6 max-w-2xl text-sm text-[#636262] sm:text-base md:mb-10 lg:mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna</p>
+      <div class="mx-auto mb-4 flex max-w-lg justify-center">
+        <form name="email-form" method="get" class="flex w-full flex-col gap-3 sm:flex-row">
+          <input type="email" class="h-9 w-full rounded-md border border-solid border-black px-3 py-6 text-sm text-[#333333]" placeholder="Enter your email" />
+          <input type="submit" value="Notify me" class="cursor-pointer rounded-md bg-black px-6 py-2 font-semibold text-white" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="block">
+    <!-- Container -->
+    <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+      <!-- Component -->
+      <div class="flex flex-col items-center">
+        <a href="#" class="mb-8 inline-block max-w-full text-black">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Phi.svg" alt="" class="inline-block max-h-10" />
+        </a>
+        <div class="max-[991px]: text-center font-semibold max-[991px]:py-1">
+          <a href="#" class="inline-block px-6 py-2 font-normal text-black transition hover:text-[#d6a701]">About</a>
+          <a href="#" class="inline-block px-6 py-2 font-normal text-black transition hover:text-[#d6a701]">Phi-2</a>
+          <a href="#" class="inline-block px-6 py-2 font-normal text-black transition hover:text-[#d6a701]">Phi-1/1.5</a>
+          <a href="#" class="inline-block px-6 py-2 font-normal text-black transition hover:text-[#d6a701]">Terms of Service</a>
+          <a href="#" class="inline-block px-6 py-2 font-normal text-black transition hover:text-[#d6a701]">Help</a>
+        </div>
+        <div class="mb-8 mt-8 w-48 [border-bottom:1px_solid_rgb(0,_0,_0)]"></div>
+        <div class="mb-12 grid w-full max-w-[208px] grid-flow-col grid-cols-4 gap-3">
+         
+        </div>
+        <p class="max-[479px]:text-sm">© Copyright 2023. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
