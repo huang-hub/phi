@@ -1,0 +1,15 @@
+
+.language-list{
+    float: right;
+}
+.language-list a{
+    margin-left: 10px;
+    color: #666;
+}
+.language-list a.curr{
+    color: #333;
+    font-weight: bold;
+}
+.language-list a:hover{
+    color: #247a8c;
+}
